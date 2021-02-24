@@ -14,7 +14,7 @@ app.use("/api/authadmin", require("./routes/authadmin"));
 // Define Routes
 app.use("/api/admin", require("./routes/admin"));
 app.use("/api/products", require("./routes/products"));
-// app.use("/api/categories", require("./routes/categories"));
+app.use("/api/categories", require("./routes/categories"));
 
 const PORT = process.env.PORT || 5000;
 
