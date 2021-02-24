@@ -16,6 +16,19 @@ router.get("/", async (req, res) => {
   }
 });
 
+// @route  GET api/products
+// @desc   Get all products
+// @access
+router.get("/:id", async (req, res) => {
+  try {
+    const products = await Products.findById(req.params.id);
+    res.json(products);
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("Server Error");
+  }
+});
+
 // @route  POST api/products
 // @desc   Add a products
 // @access  Private
@@ -35,7 +48,7 @@ router.post(
       description,
       short_description,
       stock,
-      shippment,
+      shipping,
     } = req.body;
     try {
       const newProduct = new Products({
@@ -44,7 +57,7 @@ router.post(
         description,
         short_description,
         stock,
-        shippment,
+        shipping,
       });
       const product = await newProduct.save();
       res.json(product);
@@ -65,7 +78,7 @@ router.put("/:id", authadmin, async (req, res) => {
     description,
     short_description,
     stock,
-    shippment,
+    shipping,
   } = req.body;
 
   // buiding product object
@@ -75,7 +88,7 @@ router.put("/:id", authadmin, async (req, res) => {
   if (description) productFeilds.description = description;
   if (short_description) productFeilds.short_description = short_description;
   if (stock) productFeilds.stock = stock;
-  if (shippment) productFeilds.shippment = shippment;
+  if (shipping) productFeilds.shipping = shipping;
 
   try {
     let product = await Products.findById(req.params.id);

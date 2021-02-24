@@ -18,8 +18,8 @@ const ProductSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
-  shippment: {
-    type: String,
+  shipping: {
+    type: Boolean,
     required: true,
   },
 });
