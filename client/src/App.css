@@ -1,0 +1,189 @@
+body {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.navbar-expand {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.main-header {
+  margin-left: 260px;
+  border-bottom: 1px solid #dee2e6;
+  transition: margin 0.6s;
+}
+
+.main-header.main-headerfull {
+  margin-left: 75px;
+}
+.navbar .nav-item .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+.main-sidebar {
+  height: inherit;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+  width: 260px;
+  transition: width 0.6s;
+  background-color: #343a40;
+  color: #c2c7d0;
+}
+.main-sidebar.main-sidebarskiny {
+  width: 75px;
+}
+.main-sidebarskiny:hover {
+  width: 260px;
+  z-index: 99;
+}
+.main-sidebar a {
+  text-decoration: none;
+}
+
+.main-sidebar .brand-link {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.8125rem 1.5rem;
+  transition: width, opacity 0.3s ease-in-out;
+  white-space: nowrap;
+  opacity: 1;
+  border-bottom: 1px solid #4b545c;
+}
+.main-sidebar .sidebar {
+  padding: 0 8px;
+  margin-top: 0.5rem;
+}
+.nav-link {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.main-sidebar .nav-link {
+  color: #c2c7d0;
+  display: block;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+.main-sidebar .nav-link:hover,
+.main-sidebar .nav-link:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.nav-icon {
+  margin-left: 0.05rem;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  width: 1.6rem;
+}
+.main-sidebar .nav-link .nav-icon {
+  font-size: 1.1rem;
+}
+
+.main-sidebar .nav-link p {
+  display: inline-block;
+  margin: 0px;
+
+  visibility: visible;
+  animation: fadeIn 0.6s both;
+}
+.main-sidebar .nav-link p .right {
+  position: absolute;
+  right: 1rem;
+  top: 0.7rem;
+  transition: transform ease-in-out 0.3s;
+}
+.menu-is-opening p .right {
+  transform: rotate(-90deg);
+}
+
+.main-sidebarskiny .brand-link .brand-text {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  margin-left: -100px;
+}
+.main-sidebarskiny:hover .brand-link .brand-text {
+  opacity: 1;
+  visibility: visible;
+  margin-left: 0px;
+}
+.main-sidebarskiny .nav-sidebar .nav-link p {
+  display: none;
+  animation: fadeOut 0.3s both;
+  /* margin-left: -10px; */
+  /* visibility: hidden; */
+}
+
+.main-sidebarskiny:hover .nav-sidebar .nav-link p {
+  display: inline-block;
+  margin-left: 0px;
+  visibility: visible;
+  animation: fadeIn 0.6s both;
+}
+.nav-treeview {
+  display: none;
+}
+.nav-treeview .nav-item .nav-link {
+  color: #c2c7d0;
+  display: block;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+.show-treeview {
+  display: block;
+}
+.brand-link .brand-img {
+  float: left;
+  line-height: 0.8;
+
+  margin-right: 0.5rem;
+  margin-top: -3px;
+  max-height: 33px;
+  width: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important;
+  border-radius: 50%;
+}
+
+.content-wrapper {
+  margin-left: 260px;
+  transition: margin 0.6s;
+}
+.content-wrapper.sidebar-mini-content-wrapper {
+  margin-left: 75px;
+}
+.content-header {
+  padding: 15px 0.5rem;
+}
+.content-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 0px;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    margin-left: -10px;
+  }
+}
